@@ -1,8 +1,13 @@
+variable "region" {
+  type        = string
+  description = "Region to provision resources"
+  default     = "us-east-1"
+}
 
 # Define assume role variables
 
 variable "provider_env_roles"{
-  type = map(string)
+  type    = map(string)
   default = {
     "sand-box"           = ""
     "test-acc1"          = "arn:aws:iam::XXXXXXXXXXXX:role/terraform-assume-role"
