@@ -23,3 +23,5 @@ Alarms:
 * High CPU (at 80%)
 * Backup failure
 * VPN status
+
+See [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) for a list of AWS services that publish CloudWatch metrics.
