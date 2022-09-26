@@ -8,12 +8,10 @@
         "height": 6,
         "properties": {
           "metrics": [
-            [
-              "AWS/EC2",
-              "CPUUtilization"
-            ]
+            [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"CPUUtilization\"', 'Average', 300)", "id": "e1", "label": "CPU Utilization" } ]
           ],
           "period": 60,
+          "liveData": true,
           "stat": "Maximum",
           "region": "${region}",
           "title": "EC2|CPU Utilization"
@@ -27,12 +25,10 @@
         "height": 6,
         "properties": {
           "metrics": [
-            [
-              "AWS/EC2",
-              "NetworkIn"
-            ]
+            [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"NetworkIn\"', 'Maximum', 60)", "id": "e2", "label": "NetworkIn" } ]
           ],
           "period": 60,
+          "liveData": true,
           "stat": "Maximum",
           "region": "${region}",
           "title": "EC2|Network In"
@@ -46,12 +42,10 @@
         "height": 6,
         "properties": {
           "metrics": [
-            [
-              "AWS/EC2",
-              "NetworkOut"
-            ]
+            [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"NetworkOut\"', 'Maximum', 60)", "id": "e3", "label": "NetworkOut" } ]
           ],
           "period": 60,
+          "liveData": true,
           "stat": "Maximum",
           "region": "${region}",
           "title": "EC2|Network Out"
@@ -65,12 +59,10 @@
         "height": 6,
         "properties": {
           "metrics": [
-            [
-              "AWS/EC2",
-              "DiskReadOps"
-            ]
+            [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"DiskReadOps\"', 'Maximum', 60)", "id": "e4", "label": "DiskReadOps" } ]
           ],
           "period": 60,
+          "liveData": true,
           "stat": "Maximum",
           "region": "${region}",
           "title": "EC2|Disk Read Ops"
@@ -84,12 +76,10 @@
         "height": 6,
         "properties": {
           "metrics": [
-            [
-              "AWS/EC2",
-              "DiskWriteOps"
-            ]
+            [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"DiskWriteOps\"', 'Maximum', 60)", "id": "e5", "label": "DiskWriteOps" } ]
           ],
           "period": 60,
+          "liveData": true,
           "stat": "Maximum",
           "region": "${region}",
           "title": "EC2|Disk Write Ops"
